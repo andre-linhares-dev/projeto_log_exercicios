@@ -76,9 +76,9 @@ th {
     form {
         min-height: 100px;
         flex-direction:column;
-        max-width: fit-content;
-        /* align-content: space-between; */
-        align-content: stretch;    
+        max-width: 180px;
+        align-content: space-between;
+        /* align-content: stretch;     */
      
 }
 }
