@@ -1,4 +1,3 @@
-
 let listaAtividades = Array()
 
 const atividadesJson = localStorage.getItem("logExercicios.atividades")
@@ -8,7 +7,7 @@ if (atividadesJson) {
     addElementToDom(listaAtividades)
 }
 
-console.log (atividadesJson)
+console.log(atividadesJson)
 
 formulario.addEventListener('submit', function (evt) {
     evt.preventDefault()
@@ -22,14 +21,13 @@ formulario.addEventListener('submit', function (evt) {
     })
     console.log(listaAtividades)
     localStorage.setItem("logExercicios.atividades", JSON.stringify(listaAtividades))
-    
-    addElementToDom()
-    
 
+    addElementToDom()
+    formulario.reset()
 })
 
 function addElementToDom() {
-    
+
     // let tabela = document.getElementById("linhaTable")
 
     // let linha = document.createElement('tr')
@@ -48,12 +46,31 @@ function addElementToDom() {
 
     let tasksList = document.getElementById("linhaTable")
     tasksList.innerHTML = ``
-    listaAtividades.map((element) => tasksList.innerHTML +=
+    listaAtividades.map((element, key) => tasksList.innerHTML +=
         `<tr> 
                 <td> <p>${element.data}</p> </td>
                 <td> <p>${element.atividade}</p> </td>
                 <td> <p>${element.tempo}</p> </td>
+                <td id='tdButton'> <button class="trash-btn" id="${key}">X</button> </td>
          </tr>
         `
     )
+}
+
+const deleteItem = (event) => {
+    const item = event.target;
+    // console.log(item)
+    const itemId = item.id
+    // console.log(itemId)
+
+    if (item.classList.value === "trash-btn") {
+        listaAtividades.splice(itemId, 1)
+        addElementToDom(listaAtividades)
+        storageUpdate()
+    }
+}
+document.addEventListener("click", deleteItem)
+
+function storageUpdate() {
+    localStorage.setItem("logExercicios.atividades", JSON.stringify(listaAtividades))
 }

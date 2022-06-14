@@ -32,6 +32,8 @@ justify-content: space-between;
 
     }
 
+
+
     button{
         border-radius: 8px;
         border-width: 1px;
@@ -45,10 +47,29 @@ button:hover {
     cursor: pointer;
 
 }
+td button {
+    border: none;
+    background-color: rgb(236, 86, 75) ;
+    box-shadow: 0 0px 15px 5px rgba(0,0,0,0.4);
+    padding: 8px;
+}
+
+
+td button:hover {
+    background-color: rgb(192, 71, 63);
+    box-shadow: 0 0px 15px 5px rgba(0,0,0,0.4);
+}
+
+#tdButton {
+    border: none;
+    box-shadow: inset 0px 0px 0px 0px rgb(0 0 0 / 40%);
+    padding: 10px;
+}
 
 table{
-    
-    border-style: solid ;
+    padding: 1.5%;
+    border-radius: 10px;
+    border-style: none ;
     background-color: rgba(172, 204, 199, 0.514);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -60,12 +81,23 @@ td p{
     color: rgb(0, 0, 0);
 }
  td{
-border-style: outset;
+border-style: none;
+border-radius: 5px;
+box-shadow: inset 0px 1px 7px 2px rgb(0 0 0 / 40%);;
  }
 th {
     width: 200px;
-    background-color: rgb(248, 89, 89);
+    background-color: rgb(236, 86, 75);
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 7px 2px rgb(0 0 0 / 40%);
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 600px){
 
