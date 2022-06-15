@@ -57,6 +57,7 @@ function addElementToDom() {
     )
 }
 
+
 const deleteItem = (event) => {
     const item = event.target;
     // console.log(item)
