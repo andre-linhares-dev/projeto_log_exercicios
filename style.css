@@ -1,3 +1,8 @@
+
+    html {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
+      }
+
 body {
     background-image: url(artem-verbo-rAyIvNqlwCY-unsplash.jpg);
     background-size: cover ;
@@ -137,8 +142,8 @@ th {
         min-height: 100px;
         flex-direction:column;
         max-width: 180px;
-        align-content: space-between;
-        /* align-content: stretch;     */
+        align-items: space-between;
+        justify-content: stretch;   
      
 }
 }
