@@ -146,4 +146,11 @@ th {
         justify-content: stretch;   
      
 }
+
+input[type="time" i] {
+    width: 180px;
+}
+input[type="date" i] {
+    width: 180px;
+}
 }
