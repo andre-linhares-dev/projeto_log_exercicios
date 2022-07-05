@@ -14,7 +14,7 @@ formulario.addEventListener('submit', function (evt) {
     const data = document.getElementById("inputDate").value
     const atividade = document.getElementById("inputAtividade").value
     const tempo = document.getElementById("tempoTotal").value
-    listaAtividades.push({
+    listaAtividades.unshift({
         data,
         atividade,
         tempo
